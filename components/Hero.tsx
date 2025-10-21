@@ -58,6 +58,7 @@ export function Hero() {
     }, 3000) // Change every 3 seconds
 
     return () => clearInterval(interval)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

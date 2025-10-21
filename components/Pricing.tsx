@@ -89,7 +89,7 @@ export default function Pricing() {
         {t('pricing.description')}
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-6 sm:mt-20 lg:max-w-7xl lg:grid-cols-3">
-        {tiers.map((tier, tierIdx) => (
+        {tiers.map((tier) => (
           <div
             key={tier.id}
             className={classNames(

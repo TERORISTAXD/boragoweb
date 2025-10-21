@@ -1,17 +1,29 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Team - Borago Web',
-  description: 'Meet the talented people behind Borago Web - Nikola Dimitrov and Stanislav Nikolov',
+  title: 'Our Team',
+  description: 'Meet the talented people behind BoragoWeb – Nikola Dimitrov and Stanislav Nikolov, web design experts.',
+  keywords: ['BoragoWeb team', 'Nikola Dimitrov', 'Stanislav Nikolov', 'web design team', 'Bulgaria'],
   openGraph: {
-    title: 'Our Team - Borago Web',
-    description: 'Meet Nikola Dimitrov (Founder) and Stanislav Nikolov (Co-founder)',
+    title: 'Our Team – BoragoWeb',
+    description: 'Meet the talented people behind BoragoWeb – Nikola Dimitrov and Stanislav Nikolov, web design experts.',
+    url: 'https://boragoweb.eu/team',
+    siteName: 'BoragoWeb',
+    images: [
+      {
+        url: 'https://boragoweb.eu/preview.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_EU',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Team - Borago Web',
-    description: 'Meet the talented people behind Borago Web',
+    title: 'Our Team – BoragoWeb',
+    description: 'Meet the talented people behind BoragoWeb.',
+    images: ['https://boragoweb.eu/preview.png'],
   },
 }
 

@@ -1,5 +1,5 @@
 import { requireAdmin } from '@/lib/admin/auth'
-import { TrendingUp, Users, Eye, Clock, BarChart3 } from 'lucide-react'
+import { Users, Eye, Clock, BarChart3 } from 'lucide-react'
 import StatCard from '@/components/admin/StatCard'
 
 export default async function AnalyticsPage() {

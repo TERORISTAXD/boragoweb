@@ -36,7 +36,7 @@ export default function CheckoutSuccessPage() {
         <h1 className="heading-2 mb-4">Payment Successful!</h1>
         
         <p className="text-foreground-muted mb-8">
-          Thank you for your purchase. You'll receive a confirmation email shortly
+          Thank you for your purchase. You&apos;ll receive a confirmation email shortly
           with your order details and download links.
         </p>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createSupabaseBrowserClient } from '@/lib/supabase/client'
 import Link from 'next/link'
@@ -96,7 +96,7 @@ export default function SignInPage() {
           </form>
 
           <div className="mt-6 text-center text-sm text-foreground-muted">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/auth/signup" className="text-accent hover:underline">
               Sign up
             </Link>

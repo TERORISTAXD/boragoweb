@@ -2,6 +2,7 @@ import { requireAdmin } from '@/lib/admin/auth'
 import { createSupabaseServerComponentClient } from '@/lib/supabase/server'
 import { Download, Search, Filter } from 'lucide-react'
 import Link from 'next/link'
+import { Json } from '@/types/database'
 
 export default async function OrdersPage() {
   await requireAdmin()
@@ -128,7 +129,7 @@ export default async function OrdersPage() {
                       </Link>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {(order.shipping_info as any)?.email || 'N/A'}
+                      {(order.shipping_info as Json && typeof order.shipping_info === 'object' && order.shipping_info !== null && 'email' in order.shipping_info) ? String(order.shipping_info.email) : 'N/A'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                       {formatCurrency(order.total_cents, order.currency)}

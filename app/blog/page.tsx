@@ -3,11 +3,33 @@ import { PageBackground } from '@/components/PageBackground'
 import { BlogClient } from '@/components/BlogClient'
 import Link from 'next/link'
 import { formatDate } from '@/lib/utils'
-import { Calendar, Clock } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 
 export const metadata = {
-  title: 'Blog - Borago',
-  description: 'Insights, tutorials, and updates from the Borago team',
+  title: 'Blog',
+  description: 'Insights, tutorials, and updates from the BoragoWeb team – web design tips and development guides.',
+  keywords: ['web design blog', 'development tutorials', 'BoragoWeb insights', 'web development tips'],
+  openGraph: {
+    title: 'Blog – BoragoWeb Insights',
+    description: 'Insights, tutorials, and updates from the BoragoWeb team – web design tips and development guides.',
+    url: 'https://boragoweb.eu/blog',
+    siteName: 'BoragoWeb',
+    images: [
+      {
+        url: 'https://boragoweb.eu/preview.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_EU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog – BoragoWeb Insights',
+    description: 'Insights, tutorials, and updates from the BoragoWeb team.',
+    images: ['https://boragoweb.eu/preview.png'],
+  },
 }
 
 export const revalidate = 3600
@@ -52,7 +74,7 @@ export default async function BlogPage() {
 
                     {post.tags && post.tags.length > 0 && (
                       <div className="flex gap-2">
-                        {post.tags.slice(0, 3).map((tag) => (
+                        {post.tags.slice(0, 3).map((tag: string) => (
                           <span
                             key={tag}
                             className="px-2 py-1 rounded-full bg-background-secondary text-xs"

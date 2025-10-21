@@ -5,8 +5,30 @@ import { Suspense } from 'react'
 import { PortfolioClient } from '@/components/PortfolioClient'
 
 export const metadata = {
-  title: 'Portfolio - Borago',
-  description: 'Explore our creative projects and case studies',
+  title: 'Portfolio',
+  description: 'Explore our creative projects and case studies – web design and development work by BoragoWeb.',
+  keywords: ['portfolio', 'web design projects', 'case studies', 'BoragoWeb projects', 'web development'],
+  openGraph: {
+    title: 'Portfolio – BoragoWeb Projects',
+    description: 'Explore our creative projects and case studies – web design and development work by BoragoWeb.',
+    url: 'https://boragoweb.eu/portfolio',
+    siteName: 'BoragoWeb',
+    images: [
+      {
+        url: 'https://boragoweb.eu/preview.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_EU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio – BoragoWeb Projects',
+    description: 'Explore our creative projects and case studies.',
+    images: ['https://boragoweb.eu/preview.png'],
+  },
 }
 
 export const revalidate = 3600

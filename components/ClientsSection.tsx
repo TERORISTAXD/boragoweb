@@ -9,36 +9,37 @@ const clients = [
     name: 'BORAGO',
     logo: '/clients/borago.svg',
     colorLogo: '/clients/borago-color.svg',
-    featured: true, // Makes it bigger
-    website: 'https://boragocafe.eu',
+    featured: true,
+    website: 'https://borago.netlify.app',
   },
   {
-    name: 'MEDTRANS',
+    name: 'MEDTRANS', 
     logo: '/clients/medtrans.svg',
     colorLogo: '/clients/medtrans-color.svg',
-    featured: true, // Makes it bigger
+    featured: false,
     website: 'https://medtrans1.netlify.app',
   },
-  {
-    name: 'ICN.Bg',
-    logo: '/clients/icn.svg',
-    colorLogo: '/clients/icn-color.svg',
-  },
-  {
-    name: 'TRAFICOM',
-    logo: '/clients/traficom.svg',
-    colorLogo: '/clients/traficom-color.svg',
-  },
-  {
-    name: 'UniComs',
-    logo: '/clients/unicoms.svg',
-    colorLogo: '/clients/unicoms-color.svg',
-  },
-  {
-    name: 'skillplate',
-    logo: '/clients/skillplate.svg',
-    colorLogo: '/clients/skillplate-color.svg',
-  },
+  // Uncomment when logos are added to /public/clients/
+  // {
+  //   name: 'ICN.Bg',
+  //   logo: '/clients/icn.svg',
+  //   colorLogo: '/clients/icn-color.svg',
+  // },
+  // {
+  //   name: 'TRAFICOM',
+  //   logo: '/clients/traficom.svg',
+  //   colorLogo: '/clients/traficom-color.svg',
+  // },
+  // {
+  //   name: 'UniComs',
+  //   logo: '/clients/unicoms.svg',
+  //   colorLogo: '/clients/unicoms-color.svg',
+  // },
+  // {
+  //   name: 'skillplate',
+  //   logo: '/clients/skillplate.svg',
+  //   colorLogo: '/clients/skillplate-color.svg',
+  // },
 ]
 
 export function ClientsSection() {

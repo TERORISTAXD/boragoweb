@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Save, Plus, Edit2, Trash2 } from 'lucide-react'
+import { Save, Edit2 } from 'lucide-react'
 import { createSupabaseBrowserClient } from '@/lib/supabase/client'
 import toast from 'react-hot-toast'
 
@@ -23,6 +23,7 @@ export default function ContentManagementPage() {
 
   useEffect(() => {
     fetchContents()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const fetchContents = async () => {

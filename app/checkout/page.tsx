@@ -23,7 +23,7 @@ type CheckoutFormData = z.infer<typeof checkoutSchema>
 
 export default function CheckoutPage() {
   const router = useRouter()
-  const { items, getTotalPrice, clearCart } = useCart()
+  const { items, getTotalPrice } = useCart()
   const [loading, setLoading] = useState(false)
   const totalPrice = getTotalPrice()
 

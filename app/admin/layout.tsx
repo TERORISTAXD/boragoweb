@@ -1,5 +1,15 @@
 import { requireAdmin } from '@/lib/admin/auth'
 import AdminNav from '@/components/admin/AdminNav'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Admin Dashboard',
+  description: 'BoragoWeb admin dashboard – manage content, products, and analytics.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default async function AdminLayout({
   children,

@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, User, LogOut } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { Menu, X, LogOut } from 'lucide-react'
+import { useState } from 'react'
 import { useUser } from '@/hooks/useUser'
 import { createSupabaseBrowserClient } from '@/lib/supabase/client'
 import { cn } from '@/lib/utils'
@@ -21,16 +21,10 @@ const navLinks = [
 
 export function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
   const { user, isAdmin, loading } = useUser()
   const supabase = createSupabaseBrowserClient()
   const { language, setLanguage, t } = useLanguage()
-
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()

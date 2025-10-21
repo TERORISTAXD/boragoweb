@@ -4,23 +4,24 @@
  */
 
 // Initialize GA4 client
-let analyticsClient: any = null
+const analyticsClient: unknown = null
 
-function getAnalyticsClient() {
-  // Check if GA package is installed
-  try {
-    // Dynamic import to make it optional
-    if (!analyticsClient && process.env.GOOGLE_ANALYTICS_PROPERTY_ID) {
-      // This will be null if package not installed
-      return null
-    }
-  } catch (error) {
-    console.warn('Google Analytics package not installed. Analytics features disabled.')
-    return null
-  }
-
-  return null // Disabled for now until package is installed
-}
+// Disabled for now - uncomment when Google Analytics package is installed
+// function getAnalyticsClient() {
+//   // Check if GA package is installed
+//   try {
+//     // Dynamic import to make it optional
+//     if (!analyticsClient && process.env.GOOGLE_ANALYTICS_PROPERTY_ID) {
+//       // This will be null if package not installed
+//       return null
+//     }
+//   } catch (error) {
+//     console.warn('Google Analytics package not installed. Analytics features disabled.')
+//     return null
+//   }
+//
+//   return null // Disabled for now until package is installed
+// }
 
 export interface AnalyticsMetrics {
   pageViews: number
@@ -39,8 +40,8 @@ export interface PageViewData {
  * Fetch analytics metrics for a date range
  */
 export async function getAnalyticsMetrics(
-  startDate: string = '30daysAgo',
-  endDate: string = 'today'
+  _startDate: string = '30daysAgo',
+  _endDate: string = 'today'
 ): Promise<AnalyticsMetrics | null> {
   // Analytics disabled - return null
   return null
@@ -50,9 +51,9 @@ export async function getAnalyticsMetrics(
  * Fetch top pages by views
  */
 export async function getTopPages(
-  limit: number = 10,
-  startDate: string = '30daysAgo',
-  endDate: string = 'today'
+  _limit: number = 10,
+  _startDate: string = '30daysAgo',
+  _endDate: string = 'today'
 ): Promise<PageViewData[]> {
   // Analytics disabled - return empty array
   return []
@@ -70,10 +71,10 @@ export async function getRealtimeUsers(): Promise<number> {
  * Cache analytics data in database
  */
 export async function cacheAnalyticsData(
-  metricName: string,
-  metricValue: any,
-  dateRange: string,
-  expiresInMinutes: number = 60
+  _metricName: string,
+  _metricValue: unknown,
+  _dateRange: string,
+  _expiresInMinutes: number = 60
 ) {
   // Analytics caching disabled
   return
@@ -83,9 +84,9 @@ export async function cacheAnalyticsData(
  * Get cached analytics data
  */
 export async function getCachedAnalyticsData(
-  metricName: string,
-  dateRange: string
-): Promise<any | null> {
+  _metricName: string,
+  _dateRange: string
+): Promise<unknown | null> {
   // Analytics caching disabled
   return null
 }

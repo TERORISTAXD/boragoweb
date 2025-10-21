@@ -1,4 +1,4 @@
-import { createSupabaseServerComponentClient } from '@/lib/supabase/server'
+import { createSupabaseServerComponentClient, createSupabaseBuildClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,21 +7,23 @@ import { formatDate } from '@/lib/utils'
 
 export const revalidate = 3600
 
+// Generate static slugs at build time (no cookies)
 export async function generateStaticParams() {
-  const supabase = await createSupabaseServerComponentClient()
+  const supabase = createSupabaseBuildClient()
   const { data: projects } = await supabase.from('projects').select('slug')
 
-  return projects?.map((project) => ({
+  return (projects || []).map((project: { slug: string }) => ({
     slug: project.slug,
-  })) || []
+  }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const supabase = await createSupabaseServerComponentClient()
   const { data: project } = await supabase
     .from('projects')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .single()
 
   if (!project) {
@@ -31,22 +33,46 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${project.title} - Portfolio - Borago`,
-    description: project.summary || project.title,
+    title: project.title,
+    description: project.summary || `${project.title} – A portfolio project by BoragoWeb showcasing web design and development expertise.`,
+    keywords: ['portfolio project', 'web design', 'BoragoWeb', project.title, ...(project.tags || [])],
     openGraph: {
-      title: project.title,
+      title: `${project.title} – BoragoWeb Portfolio`,
       description: project.summary || project.title,
-      images: project.cover_image ? [project.cover_image] : [],
+      url: `https://boragoweb.eu/portfolio/${project.slug}`,
+      siteName: 'BoragoWeb',
+      images: project.cover_image ? [
+        {
+          url: project.cover_image,
+          width: 1200,
+          height: 630,
+        }
+      ] : [
+        {
+          url: 'https://boragoweb.eu/preview.png',
+          width: 1200,
+          height: 630,
+        }
+      ],
+      locale: 'en_EU',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} – BoragoWeb Portfolio`,
+      description: project.summary || project.title,
+      images: project.cover_image ? [project.cover_image] : ['https://boragoweb.eu/preview.png'],
     },
   }
 }
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const supabase = await createSupabaseServerComponentClient()
   const { data: project } = await supabase
     .from('projects')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .single()
 
   if (!project) {
@@ -114,7 +140,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           {project.tags && project.tags.length > 0 && (
             <div className="flex items-center gap-2 mb-8 flex-wrap">
               <Tag className="w-4 h-4 text-foreground-muted" />
-              {project.tags.map((tag) => (
+              {project.tags.map((tag: string) => (
                 <Link
                   key={tag}
                   href={`/portfolio?tag=${encodeURIComponent(tag)}`}

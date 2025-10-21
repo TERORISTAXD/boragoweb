@@ -1,7 +1,23 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import type { Database } from '@/types/database'
 
+// Build-time client (no cookies) - use for generateStaticParams
+export function createSupabaseBuildClient() {
+  return createClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    }
+  )
+}
+
+// Runtime client (with cookies) - use for page components
 export async function createSupabaseServerComponentClient() {
   const cookieStore = await cookies()
 
