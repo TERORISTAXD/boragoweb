@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Menu, X, LogOut } from 'lucide-react'
 import { useState } from 'react'
 import { useUser } from '@/hooks/useUser'
@@ -13,8 +13,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/team', label: 'Team' },
-  { href: '/shop', label: 'Shop' },
+  { href: '/#services', label: 'Services' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ]
@@ -22,9 +21,29 @@ const navLinks = [
 export function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
   const { user, isAdmin, loading } = useUser()
   const supabase = createSupabaseBrowserClient()
   const { language, setLanguage, t } = useLanguage()
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === '/#services') {
+      e.preventDefault()
+      if (pathname !== '/') {
+        router.push('/')
+        setTimeout(() => {
+          document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      } else {
+        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else if (href === '/') {
+      if (pathname === '/') {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
+  }
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()
@@ -35,18 +54,18 @@ export function Nav() {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      
+
       <div className="container-custom">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <Image 
-              src="/logo.svg" 
-              alt="Borago Web Logo" 
-              width={40} 
+            <Image
+              src="/logo.svg"
+              alt="Borago Web Logo"
+              width={40}
               height={40}
               className="w-10 h-10"
             />
@@ -56,11 +75,12 @@ export function Nav() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   'text-sm font-medium transition-colors hover:text-accent',
                   pathname === link.href ? 'text-accent' : 'text-foreground-muted'
@@ -74,9 +94,9 @@ export function Nav() {
           {/* Right side actions */}
           <div className="flex items-center gap-4">
             {/* Language Selector */}
-            <LanguageSelector 
-              currentLanguage={language} 
-              onLanguageChange={setLanguage} 
+            <LanguageSelector
+              currentLanguage={language}
+              onLanguageChange={setLanguage}
             />
 
             {/* User menu */}
@@ -127,7 +147,10 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    handleNavClick(e, link.href)
+                    setMobileMenuOpen(false)
+                  }}
                   className={cn(
                     'text-sm font-medium transition-colors hover:text-accent px-2 py-1',
                     pathname === link.href ? 'text-accent' : 'text-foreground-muted'
@@ -136,7 +159,7 @@ export function Nav() {
                   {t(`nav.${link.label.toLowerCase()}`)}
                 </Link>
               ))}
-              
+
               {user && (
                 <>
                   {isAdmin && (

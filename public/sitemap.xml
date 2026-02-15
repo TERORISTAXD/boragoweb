@@ -62,4 +62,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Web Design (SEO Landing Page) -->
+  <url>
+    <loc>https://boragoweb.eu/web-design</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

@@ -22,29 +22,33 @@ export const translations: Translations = {
   'nav.signout': { bg: 'Изход', en: 'Sign Out' },
   'nav.admin': { bg: 'Админ', en: 'Admin' },
   'nav.cart': { bg: 'Количка', en: 'Cart' },
-  
+  'nav.services': { bg: 'Услуги', en: 'Services' },
+
   // Hero Section
   'hero.title': { bg: 'Създаваме уеб решения', en: 'We Create Web Solutions' },
-  'hero.subtitle': { bg: 'Модерни уебсайтове и онлайн магазини', en: 'Modern Websites and Online Stores' },
-  'hero.cta': { bg: 'Започнете сега', en: 'Get Started' },
-  
+  'hero.headline': { bg: 'Превърнете уебсайта си във вашия най-добър служител', en: 'Turn Your Website Into Your Best Employee' },
+  'hero.subheadline': { bg: 'Изпреварете конкуренцията с модерни уеб решения и AI инструменти, които работят денонощно за вашия бизнес.', en: 'Stay ahead of the competition with modern web solutions and AI tools that work 24/7 for your business.' },
+  'hero.ctaPrimary': { bg: 'Нашите Услуги', en: 'Our Services' },
+  'hero.bookConsultation': { bg: 'Резервирайте консултация', en: 'Book a Consultation' },
+  'hero.badge': { bg: 'Водещи AI и уеб дизайнери за прогресивни бизнеси', en: 'Leading AI and Web Designers for Progressive Businesses' },
+
   // Pricing Section
   'pricing.title': { bg: 'Цени', en: 'Pricing' },
   'pricing.subtitle': { bg: 'Изберете правилната услуга за вас', en: 'Choose the right plan for you' },
   'pricing.description': { bg: 'Изберете достъпна услуга, която е пълна с най-добрите функции за ангажиране на вашата аудитория, създаване на лоялност на клиентите и стимулиране на продажбите.', en: 'Choose an affordable plan that\'s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.' },
   'pricing.cta': { bg: 'Започнете днес', en: 'Get started today' },
   'pricing.oneTime': { bg: 'еднократно', en: 'one-time' },
-  
+
   // Pricing Tiers
   'tier.consultation': { bg: 'Консултация', en: 'Consultation' },
   'tier.onlineStore': { bg: 'Онлайн магазин', en: 'Online store' },
   'tier.staticWebsite': { bg: 'Статичен уебсайт', en: 'Static website' },
-  
+
   // Pricing Descriptions
-  'pricing.consultationDesc': { bg: 'Безплатна констултация за вас или вашият бизнес.', en: 'The perfect plan if you\'re just getting started with our product.' },
+  'pricing.consultationDesc': { bg: 'Безплатна констултация за вас или вашият бизнес.', en: 'Free consultation for you or your business.' },
   'pricing.onlineStoreDesc': { bg: 'Специална поддръжка и инфраструктура за вашата компания.', en: 'Dedicated support and infrastructure for your company.' },
   'pricing.staticWebsiteDesc': { bg: 'Перфектната услуга, ако току-що започвате с нашия продукт.', en: 'The perfect plan if you\'re just getting started with our product.' },
-  
+
   // Features
   'feature.individualConsultation': { bg: 'Индивидуална консултация', en: 'Individual consultation' },
   'feature.businessStrategies': { bg: 'Стратегии за бизнес развитие', en: 'Strategies for business development' },
@@ -61,45 +65,41 @@ export const translations: Translations = {
   'feature.websiteSpeed': { bg: 'Скорост на уебсайта', en: 'Website speed' },
   'feature.basicSEO': { bg: 'Основна SEO оптимизация', en: 'Basic SEO optimization' },
   'feature.support247': { bg: 'Поддръжка 24/7', en: '24/7 Support' },
-  
-  // Hero Section
-  'hero.badge': { bg: 'Водещи AI и уеб дизайнери за прогресивни бизнеси', en: 'Leading AI and Web Designers for Progressive Businesses' },
-  'hero.mainTitle1': { bg: 'Вашата компания', en: 'Your company' },
-  'hero.mainTitle2': { bg: 'се нуждае от', en: 'needs' },
-  'hero.aiServices': { bg: 'AI услуги', en: 'AI Services' },
-  'hero.website': { bg: 'уебсайт', en: 'Website' },
-  'hero.subtitle1': { bg: 'Експертни WIO услуги, адаптирани към вашите бизнес нужди', en: 'Expert WIO Services Tailored for Your Business Needs' },
-  'hero.subtitle2': { bg: 'Трансформирайте операциите си с AI-базирани решения', en: 'Transform Your Operations with AI-Driven Solutions' },
-  'hero.getStarted': { bg: 'Започнете', en: 'Get Started' },
-  'hero.bookConsultation': { bg: 'Резервирайте консултация', en: 'Book a Consultation' },
-  
-  // WIO Section
-  'wio.whatIs': { bg: 'Какво е', en: 'What is' },
-  'wio.title': { bg: 'WIO-като-услуга', en: 'WIO-as-a-Service' },
-  'wio.description': { bg: 'Нашата WIO-като-услуга ви предлага експертизата на Web Intelligence Officer без допълнителните разходи. От разработка на уебсайт до AI интеграция, ние предоставяме цялостни дигитални решения, адаптирани към вашия бизнес, осигурявайки дългосрочен растеж, ефективност и иновации.', en: 'Our WIO-as-a-Service offers you the expertise of a Web Intelligence Officer without the overhead. From website development to AI integration, we provide end-to-end digital solutions tailored to your business, ensuring long-term growth, efficiency, and innovation.' },
-  
-  // Benefits
-  'benefit.strategicPlanning': { bg: 'Стратегическо планиране', en: 'Strategic Planning' },
-  'benefit.strategicPlanningDesc': { bg: 'Разработете и изпълнете технологична пътна карта, съобразена с вашите бизнес цели, за да осигурите устойчив растеж.', en: 'Develop and execute a technology roadmap aligned with your business goals to ensure sustainable growth.' },
-  'benefit.security': { bg: 'Сигурност и съответствие', en: 'Security & Compliance' },
-  'benefit.securityDesc': { bg: 'Внедрете усъвършенствани мерки за сигурност и осигурете съответствие с индустриалните стандарти за защита на вашия бизнес.', en: 'Implement advanced security measures and ensure compliance with industry standards to protect your business.' },
-  'benefit.customSolutions': { bg: 'Персонализирани решения', en: 'Custom Solutions' },
-  'benefit.customSolutionsDesc': { bg: 'Софтуерни решения по поръчка, адресиращи вашите специфични нужди, от фактуриране и автоматизация до интеграция и операции.', en: 'Tailor-made software solutions addressing your specific needs, from billing and automation to integration and operations.' },
-  'benefit.efficiency': { bg: 'Оперативна ефективност', en: 'Operational Efficiency' },
-  'benefit.efficiencyDesc': { bg: 'Оптимизирайте операциите си с ефективни технологични решения и автоматизация за повишаване на производителността.', en: 'Streamline your operations with effective technology solutions and automation to boost productivity.' },
-  'benefit.innovation': { bg: 'Иновации и растеж', en: 'Innovation & Growth' },
-  'benefit.innovationDesc': { bg: 'Стимулирайте иновациите и устойчивия растеж чрез стратегическо внедряване на технологии и дигитална трансформация.', en: 'Drive innovation and sustainable growth through strategic technology implementation and digital transformation.' },
-  'benefit.leadership': { bg: 'Експертно лидерство', en: 'Expert Leadership' },
-  'benefit.leadershipDesc': { bg: 'Получете достъп до опитна експертиза на WIO ниво без разходите за пълноценно наемане на изпълнителен директор.', en: 'Access experienced WIO-level expertise without the overhead of a full-time executive hire.' },
-  
+
+
+  // WIO Section (Updated Copy)
+  'wio.whatIs': { bg: 'Кои сме ние?', en: 'Who we are?' },
+  'wio.title': { bg: 'Вашият личен технологичен експерт – без излишни разходи', en: 'Your Personal Tech Expert – Without Unnecessary Costs' },
+  'wio.description': { bg: 'Представете си, че имате опитен IT директор в екипа си, но без да плащате скъпата му заплата. Ние помагаме да намерите правилните решения, да спестите време и да развиете бизнеса си по-умно.', en: 'Our WIO-as-a-Service offers you the expertise of a Web Intelligence Officer without the overhead. From website development to AI integration, we provide end-to-end digital solutions tailored to your business, ensuring long-term growth, efficiency, and innovation.' },
+
+  // Benefits (Updated Copy)
+  'benefit.strategicPlanning': { bg: 'Ясен план за бъдещето', en: 'Strategic Planning' },
+  'benefit.strategicPlanningDesc': { bg: 'Край на хаоса. Създаваме проста и работеща стратегия, която следва вашите цели и гарантира развитие стъпка по стъпка.', en: 'Develop and execute a technology roadmap aligned with your business goals to ensure sustainable growth.' },
+  'benefit.security': { bg: 'Спокойствие за вашия бизнес', en: 'Security & Compliance' },
+  'benefit.securityDesc': { bg: 'Ние се грижим данните ви да са защитени, а системите да работят без прекъсване, за да спите спокойно.', en: 'Implement advanced security measures and ensure compliance with industry standards to protect your business.' },
+  'benefit.customSolutions': { bg: 'Решения точно за вас', en: 'Custom Solutions' },
+  'benefit.customSolutionsDesc': { bg: 'Не ви предлагаме излишни неща. Разработваме точно това, от което имате нужда – от автоматизация до нови системи.', en: 'Tailor-made software solutions addressing your specific needs, from billing and automation to integration and operations.' },
+  'benefit.efficiency': { bg: 'По-лесна работа всеки ден', en: 'Operational Efficiency' },
+  'benefit.efficiencyDesc': { bg: 'Премахваме досадните ръчни задачи и правим процесите по-бързи, за да имате време за наистина важните неща.', en: 'Streamline your operations with effective technology solutions and automation to boost productivity.' },
+  'benefit.innovation': { bg: 'Винаги крачка напред', en: 'Innovation & Growth' },
+  'benefit.innovationDesc': { bg: 'Внедряваме полезни иновации и AI инструменти, които ви дават реално предимство пред конкуренцията.', en: 'Drive innovation and sustainable growth through strategic technology implementation and digital transformation.' },
+  'benefit.leadership': { bg: 'Експертно рамо до вас', en: 'Expert Leadership' },
+  'benefit.leadershipDesc': { bg: 'Имате кого да попитате за всичко технологично. Ние сме вашият навигатор в света на дигиталните услуги.', en: 'Access experienced WIO-level expertise without the overhead of a full-time executive hire.' },
+
   // Clients Section
   'clients.title': { bg: 'Нашите клиенти', en: 'Our Clients' },
   'clients.subtitle': { bg: 'Доверени от водещи компании', en: 'Trusted by leading companies' },
-  
+  'clients.testimonial1.text': { bg: 'Изключителен професионализъм. BoragoWeb донесе реални резултати и модернизира бизнеса ни.', en: 'Exceptional professionalism. BoragoWeb delivered real results and modernized our business.' },
+  'clients.testimonial1.author': { bg: 'Ивайло Лазаров', en: 'Ivaylo Lazarov' },
+  'clients.testimonial1.company': { bg: 'Medtrans', en: 'Medtrans' },
+  'clients.testimonial2.text': { bg: 'Благодарение на BoragoWeb, клиентите ни се увеличиха значително. Препоръчвам горещо!', en: 'Thanks to BoragoWeb, our customers increased significantly. Highly recommended!' },
+  'clients.testimonial2.author': { bg: 'Ваня Димитрова', en: 'Vanya Dimitrova' },
+  'clients.testimonial2.company': { bg: 'Cafe Borago', en: 'Cafe Borago' },
+
   // Team Section
   'team.title': { bg: 'Нашият екип', en: 'Our Team' },
   'team.subtitle': { bg: 'Запознайте се с талантливите хора зад нашия успех', en: 'Meet the talented people behind our success' },
-  
+
   // Home Page
   'home.featuredWork': { bg: 'Избрани проекти', en: 'Featured Work' },
   'home.featuredWorkDesc': { bg: 'Разгледайте нашите най-нови проекти и творчески начинания', en: 'Explore our latest projects and creative endeavors' },
@@ -111,13 +111,13 @@ export const translations: Translations = {
   'home.ctaTitle': { bg: 'Готови ли сте да работим заедно?', en: 'Ready to Work Together?' },
   'home.ctaDesc': { bg: 'Нека създадем нещо невероятно. Свържете се с нас, за да обсъдим вашия проект.', en: 'Let\'s create something amazing. Get in touch to discuss your project.' },
   'home.getInTouch': { bg: 'Свържете се с нас', en: 'Get in Touch' },
-  
+
   // Common
   'common.loading': { bg: 'Зареждане...', en: 'Loading...' },
   'common.error': { bg: 'Грешка', en: 'Error' },
   'common.an': { bg: '', en: 'an' },
   'common.a': { bg: '', en: 'a' },
-  
+
   // Cookie Consent
   'cookie.title': { bg: 'Използваме бисквитки', en: 'We Use Cookies' },
   'cookie.description': { bg: 'Използваме бисквитки, за да подобрим вашето изживяване на нашия уебсайт. Продължавайки да използвате този сайт, вие се съгласявате с нашата политика за бисквитки.', en: 'We use cookies to enhance your experience on our website. By continuing to use this site, you agree to our cookie policy.' },
@@ -134,10 +134,58 @@ export const translations: Translations = {
   'cookie.required': { bg: 'Задължителни', en: 'Required' },
   'cookie.savePreferences': { bg: 'Запази избраните', en: 'Save Preferences' },
   'cookie.acceptAll': { bg: 'Приемам всички', en: 'Accept All' },
-  
+
   // Pricing Actions
   'pricing.makeRequest': { bg: 'Направете запитване', en: 'Make Request' },
-  
+
+  // Services Section
+  'services.title': { bg: 'Нашите услуги', en: 'Our Services' },
+  'services.subtitle': { bg: 'Комплексни дигитални решения за вашия бизнес', en: 'Comprehensive digital solutions for your business' },
+
+  'service.webDev.title': { bg: 'Уеб разработка', en: 'Web Development' },
+  'service.webDev.desc': { bg: 'Вашият уебсайт работи безупречно на телефон, таблет и компютър. Клиентите ви намират лесно през Google. Вие управлявате съдържанието сами – без да викате програмист всеки път.', en: 'Your website works flawlessly on phones, tablets, and computers. Customers find you easily on Google. You manage content yourself—no need to call a programmer every time.' },
+  'service.webDev.tag': { bg: 'Повече клиенти от Google', en: 'More customers from Google' },
+
+  'service.ecommerce.title': { bg: 'Електронна търговия', en: 'E-commerce Solutions' },
+  'service.ecommerce.desc': { bg: 'Продавайте онлайн 24/7, дори докато спите. Клиентите поръчват за минути, а вие управлявате продуктите и цените с няколко клика. Предлагаме плащания с карта, кеш при доставка и всичко необходимо за първата продажба.', en: 'Sell online 24/7, even while you sleep. Customers order in minutes, and you manage products and prices with a few clicks. We provide card payments, cash on delivery, and everything needed for your first sale.' },
+  'service.ecommerce.tag': { bg: 'Продавайте денонощно', en: 'Sell around the clock' },
+
+  'service.automation.title': { bg: 'Автоматизация', en: 'Automation' },
+  'service.automation.desc': { bg: 'Спестете часове всяка седмица от досадни повтарящи се задачи. Автоматично изпращане на имейли, свързване на вашите инструменти да работят заедно, AI асистент който отговаря на често задавани въпроси вместо вас.', en: 'Save hours every week on tedious repetitive tasks. Automatic email sending, connecting your tools to work together, AI assistant that answers common questions instead of you.' },
+  'service.automation.tag': { bg: 'Спестете време', en: 'Save time' },
+
+  'service.custom.title': { bg: 'Индивидуални решения', en: 'Custom Solutions' },
+  'service.custom.desc': { bg: 'Имате уникален начин на работа, който стандартните програми не поддържат? Създаваме точно това, от което се нуждаете – от специални калкулатори и системи за резервации до табла за управление и свързване с вашите съществуващи системи.', en: 'Have a unique way of working that standard software doesn\'t support? We create exactly what you need—from custom calculators and booking systems to management dashboards and connections with your existing systems.' },
+  'service.custom.tag': { bg: 'Решение точно за вас', en: 'Made for you' },
+
+  // About Us Page
+  'about.hero.title': { bg: 'Повече от просто код – ние сме вашите дигитални партньори.', en: 'More Than Just Code—We’re Your Digital Partners.' },
+  'about.hero.subtitle': { bg: 'Създаването на уебсайтове е нашият занаят, но изграждането на доверие е нашата страст.', en: 'Building websites is our craft, but building relationships is our passion.' },
+
+  'about.story.title': { bg: 'Нашата история', en: 'Our Story' },
+  'about.story.p1': { bg: 'Всичко започна съвсем просто: двама приятели, един лаптоп и една идея. Огледахме се в дигиталния свят и видяхме много шум – безлични агенции, еднакви шаблони и клиенти, които се чувстват като поредния номер в системата.', en: 'It started simply enough: two friends, a shared laptop, and a realization. We looked around at the digital landscape and saw a lot of noise—impersonal agencies, cookie-cutter templates, and clients feeling like just another ticket number.' },
+  'about.story.p2': { bg: 'Знаехме, че можем по-добре. Преди две години решихме да превърнем нашите късни вечери на програмиране и безкрайни чаши кафе в BoragoWeb. Това, което ни мотивира, не беше просто желанието да правим красиви сайтове (въпреки че обожаваме тази част), а стремежът да създадем нещо, което наистина помага на хората да развиват бизнеса си.', en: 'We knew we could do better. Two years ago, we decided to turn our late-night coding sessions and endless cups of coffee into BoragoWeb. What drove us wasn\'t just the desire to build beautiful websites (though we love that part), but the drive to create something that actually helps people grow their businesses.' },
+  'about.story.p3': { bg: 'Искахме да бъдем техническите партньори, които самите ние бихме искали да наемем: надеждни, честни и истински загрижени за вашия успех.', en: 'We wanted to be the technical partners we\'d want to hire ourselves: reliable, honest, and actually invested in your success.' },
+
+  'about.approach.title': { bg: 'Нашият подход: Малък екип, голямо въздействие', en: 'Our Approach: Small Team, Big Impact' },
+  'about.approach.p1': { bg: 'Ние не сме гигантска агенция със сложни управленски нива и бавни процеси. И честно казано? Смятаме, че това е нашата суперсила. Когато работите с BoragoWeb, вие работите директно с нас – хората, които реално изграждат вашия сайт.', en: 'We’re not a giant agency with layers of management and prolonged timelines. And honestly? We think that’s our superpower. When you work with BoragoWeb, you work directly with us—the people actually building your site.' },
+  'about.approach.p2': { bg: 'Няма "развален телефон". Това означава, че въпросите ви получават по-бърз отговор, визията ви се разбира по-ясно, а проектът върви по-гладко. Ние се отнасяме към всеки проект така, сякаш е за нашия собствен бизнес.', en: 'There’s no "middleman" lost in translation. This means your questions get answered faster, your vision is understood clearer, and your project moves smoother. We treat every project as if it were for our own business.' },
+
+  'about.values.title': { bg: 'Нашите ценности', en: 'Our Values' },
+  'about.values.quality.title': { bg: 'Качество пред количество', en: 'Quality Over Quantity' },
+  'about.values.quality.desc': { bg: 'Поемаме ограничен брой проекти, за да можем да дадем на всеки един вниманието, което заслужава. Използване на готови, банални шаблони? Това не е нашият стил.', en: 'We take on a limited number of projects so we can give each one the attention it deserves. Use generic templates? Not our style.' },
+  'about.values.people.title': { bg: 'Хората на първо място', en: 'People First' },
+  'about.values.people.desc': { bg: 'Технологиите са страхотни, но хората са тези, които имат значение. Ценим връзката, която изграждаме с вас, толкова, колкото и кода, който пишем.', en: 'Technology is cool, but people are what matter. We value the relationship we build with you as much as the code we write.' },
+  'about.values.transparency.title': { bg: 'Пълна прозрачност', en: 'Radical Transparency' },
+  'about.values.transparency.desc': { bg: 'Без скрити такси, без сложен технически жаргон, целящ да ви обърка. Само ясна комуникация и честни съвети.', en: 'No hidden fees, no tech jargon designed to confuse you. Just clear communication and honest advice.' },
+
+  'about.expertise.title': { bg: 'Нашият опит', en: 'Our Expertise' },
+  'about.expertise.p1': { bg: 'През последните две години имахме привилегията да помагаме на бизнеси от различни индустрии да изградят своето дигитално присъствие. От интуитивни онлайн магазини до елегантни портфолио сайтове – научихме какво работи и какво не.', en: 'Over the last two years, we’ve had the privilege of helping businesses across various industries establish their digital presence. From intuitive e-commerce platforms to sleek portfolio sites, we’ve learned what works and what doesn\'t.' },
+  'about.expertise.p2': { bg: 'Може да сме млада компания, но това само означава, че сме амбициозни, гъвкави и в крак с абсолютно най-новите тенденции в уеб технологиите. Не лежим на стари лаври и "как винаги се е правило" – ние търсим "как трябва да се прави днес".', en: 'We might be young as a company, but that just means we’re hungry, adaptable, and up-to-date with the absolute latest in web technology. We don’t rest on "how it’s always been done"—we look for "how it should be done today."' },
+
+  'about.cta.title': { bg: 'Готови ли сте да създадем нещо страхотно заедно?', en: 'Ready to build something great together?' },
+  'about.cta.subtitle': { bg: 'Независимо дали имате готов план или само бегла идея, ще се радваме да чуем вашата история и да видим как можем да бъдем част от нея.', en: 'Whether you have a full roadmap or just a rough idea, we’d love to hear your story and see how we can be a part of it.' },
+
   // About/Contact Page
   'contact.title': { bg: 'Свържете се с нас', en: 'Contact sales' },
   'contact.subtitle': { bg: 'Свържете се с нашия екип за продажби', en: 'Get in touch with our sales team' },
@@ -149,18 +197,18 @@ export const translations: Translations = {
   'contact.agreeToPolicy': { bg: 'Като избирате това, вие се съгласявате с нашата', en: 'By selecting this, you agree to our' },
   'contact.privacyPolicy': { bg: 'политика за поверителност', en: 'privacy policy' },
   'contact.submit': { bg: 'Да поговорим', en: 'Let\'s talk' },
-  
+
   // Portfolio Page
   'portfolio.title': { bg: 'Портфолио', en: 'Portfolio' },
   'portfolio.subtitle': { bg: 'Витрина на нашата творческа работа, иновативни решения и успешни проекти. Всяка част разказва уникална история на сътрудничество и съвършенство.', en: 'A showcase of our creative work, innovative solutions, and successful projects. Each piece tells a unique story of collaboration and excellence.' },
   'portfolio.filteredBy': { bg: 'Филтрирано по:', en: 'Filtered by:' },
   'portfolio.noProjects': { bg: 'Не са намерени проекти.', en: 'No projects found.' },
-  
+
   // Blog Page
   'blog.title': { bg: 'Блог', en: 'Blog' },
   'blog.subtitle': { bg: 'Прозрения, уроци и актуализации от нашия екип. Бъдете в крак с най-новото в дизайна, разработката и творческите технологии.', en: 'Insights, tutorials, and updates from our team. Stay up to date with the latest in design, development, and creative technology.' },
   'blog.noPosts': { bg: 'Все още няма публикации в блога. Проверете отново скоро!', en: 'No blog posts yet. Check back soon!' },
-  
+
   // Cart Page
   'cart.title': { bg: 'Количка за пазаруване', en: 'Shopping Cart' },
   'cart.empty': { bg: 'Вашата количка е празна', en: 'Your cart is empty' },
@@ -177,11 +225,11 @@ export const translations: Translations = {
   'cart.decreaseQuantity': { bg: 'Намалете количеството', en: 'Decrease quantity' },
   'cart.increaseQuantity': { bg: 'Увеличете количеството', en: 'Increase quantity' },
   'cart.removeItem': { bg: 'Премахнете артикул', en: 'Remove item' },
-  
+
   // Shop Page
   'shop.title': { bg: 'Магазин', en: 'Shop' },
   'shop.subtitle': { bg: 'Разгледайте нашата колекция от премиум дигитални продукти', en: 'Browse our collection of premium digital products' },
-  
+
   // Footer
   'footer.description': { bg: 'Креативни уеб дизайни и дигитални продукти. Изграждаме красиви изживявания за модерния уеб.', en: 'Creative web designs and digital products. Building beautiful experiences for the modern web.' },
   'footer.company': { bg: 'Компания', en: 'Company' },
@@ -195,7 +243,7 @@ export const translations: Translations = {
   'footer.privacyPolicy': { bg: 'Политика за поверителност', en: 'Privacy Policy' },
   'footer.termsOfService': { bg: 'Условия за ползване', en: 'Terms of Service' },
   'footer.rights': { bg: 'Всички права запазени.', en: 'All rights reserved.' },
-  
+
   // Terms Page
   'terms.title': { bg: 'Условия за ползване', en: 'Terms & Services' },
   'terms.lastUpdated': { bg: 'Последна актуализация: 12 октомври 2025', en: 'Last updated: October 12, 2025' },
@@ -241,7 +289,7 @@ export const translations: Translations = {
   'terms.contactUs': { bg: 'Свържете се с нас', en: 'Contact Us' },
   'terms.contactDesc': { bg: 'Ако имате въпроси относно тези Условия за ползване, моля свържете се с нас:', en: 'If you have any questions about these Terms & Services, please contact us:' },
   'terms.email': { bg: 'Имейл:', en: 'Email:' },
-  
+
   // Product Page
   'product.addToCart': { bg: 'Добави в количката', en: 'Add to Cart' },
   'product.outOfStock': { bg: 'Изчерпан', en: 'Out of Stock' },

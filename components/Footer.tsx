@@ -13,26 +13,22 @@ const socialLinks = [
 
 export function Footer() {
   const { t } = useLanguage()
-  
+
   const footerLinks = {
     company: [
       { label: t('footer.about'), href: '/about' },
       { label: t('footer.team'), href: '/team' },
       { label: t('footer.blog'), href: '/blog' },
     ],
-    shop: [
-      { label: t('footer.allProducts'), href: '/shop' },
-      { label: t('footer.cart'), href: '/cart' },
-    ],
     legal: [
       { label: t('footer.termsOfService'), href: '/terms' },
     ],
   }
-  
+
   return (
     <footer className="border-t border-white/10 bg-[#0E0E0E]">
       <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-heading font-bold text-gradient inline-block mb-4">
@@ -74,21 +70,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">{t('footer.shop')}</h3>
-            <ul className="space-y-2">
-              {footerLinks.shop.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground-muted hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           <div>
             <h3 className="font-semibold mb-4">{t('footer.legal')}</h3>

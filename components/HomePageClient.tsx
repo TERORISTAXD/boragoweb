@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { ProjectCard } from './ProjectCard'
+import { TestimonialsSection } from './TestimonialsSection'
 
 interface Project {
   id: string
@@ -71,6 +72,10 @@ export function HomePageClient({ projects }: HomePageClientProps) {
           </div>
         </section>
       )}
+
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
 
       {/* CTA Section */}
