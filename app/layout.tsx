@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   },
   description: 'BoragoWeb предлага професионална изработка на уебсайтове, SEO оптимизация и дигитални решения. Модерен уеб дизайн, бързина и ефективност за вашия бизнес в България и Европа.',
   keywords: [
+    // Bulgarian Keywords (Existing + New)
     'уеб дизайн',
     'изработка на сайт',
     'уеб разработка',
@@ -66,6 +67,22 @@ export const metadata: Metadata = {
     'уеб консултации',
     'изработка на уеб страници',
     'веб решения за бизнес',
+    // English Keywords (Targeting International footprint)
+    'web design bulgaria',
+    'custom web development',
+    'SEO optimization agency',
+    'Next.js developer',
+    'React web agency',
+    'e-commerce development',
+    'business websites',
+    'digital agency europe',
+    'frontend development',
+    'website maintenance',
+    'fast responsive websites',
+    'landing page creation',
+    'UI UX design agency',
+    'SEO services',
+    'modern web applications'
   ],
   authors: [{ name: 'BoragoWeb Team', url: 'https://boragoweb.eu' }],
   category: 'Digital Agency',
@@ -100,6 +117,9 @@ export const metadata: Metadata = {
       'bg-BG': 'https://boragoweb.eu',
       'en-US': 'https://boragoweb.eu/en',
     },
+  },
+  verification: {
+    google: 'your-google-site-verification-id',
   },
 }
 
