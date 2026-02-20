@@ -4,9 +4,22 @@ import { PageBackground } from '@/components/PageBackground'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useEffect } from 'react'
 
 export default function AboutPage() {
   const { t } = useLanguage()
+
+  useEffect(() => {
+    if (window.location.hash === '#contact') {
+      setTimeout(() => {
+        const element = document.getElementById('contact')
+        if (element) {
+          const top = element.getBoundingClientRect().top + window.scrollY - 80
+          window.scrollTo({ top, behavior: 'smooth' })
+        }
+      }, 300)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen relative">
@@ -144,7 +157,7 @@ export default function AboutPage() {
       </div>
 
       {/* Approach Section */}
-      <div className="relative py-16 sm:py-24 px-6 lg:px-8 bg-white/5">
+      <div className="relative py-16 sm:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
             {t('about.approach.title')}
@@ -180,7 +193,7 @@ export default function AboutPage() {
       </div>
 
       {/* Expertise Section */}
-      <div className="relative py-16 sm:py-24 px-6 lg:px-8 bg-white/5">
+      <div className="relative py-16 sm:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
             {t('about.expertise.title')}

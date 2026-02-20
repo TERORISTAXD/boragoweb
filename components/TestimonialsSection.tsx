@@ -41,21 +41,12 @@ export function TestimonialsSection() {
                                 "{t(testimonial.textKey)}"
                             </p>
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 relative">
-                                    <Image
-                                        src={testimonial.image}
-                                        alt={t(testimonial.authorKey)}
-                                        fill
-                                        className="object-cover"
-                                    />
+                                <div className="w-12 h-12 flex-shrink-0 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#22c55e]/20">
+                                    {t(testimonial.authorKey).charAt(0)}
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-white">
-                                        {t(testimonial.authorKey)}
-                                    </h4>
-                                    <p className="text-sm text-[#4ade80]">
-                                        {t(testimonial.companyKey)}
-                                    </p>
+                                    <h4 className="text-white font-bold">{t(testimonial.authorKey)}</h4>
+                                    <p className="text-gray-400 text-sm">{t(testimonial.companyKey)}</p>
                                 </div>
                             </div>
                         </motion.div>

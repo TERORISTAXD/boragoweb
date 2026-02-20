@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
 import { CookieConsent } from '@/components/CookieConsent'
+import { BackToTop } from '@/components/BackToTop'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import './globals.css'
 
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'BoragoWeb Team', url: 'https://boragoweb.eu' }],
   category: 'Digital Agency',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.svg',
   },
   openGraph: {
     title: 'BoragoWeb – Изработка на уебсайтове и SEO оптимизация',
@@ -109,10 +110,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-[#0A0A0A]">
+      <body className="min-h-screen flex flex-col bg-background text-foreground">
         <LanguageProvider>
           <Nav />
-          <main id="main-content" className="flex-1 bg-[#0A0A0A]">
+          <main id="main-content" className="flex-1">
             {children}
           </main>
           <Footer />
@@ -134,6 +135,7 @@ export default function RootLayout({
             }}
           />
           <CookieConsent />
+          <BackToTop />
         </LanguageProvider>
       </body>
     </html>

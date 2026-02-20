@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { ProjectCard } from './ProjectCard'
 import { TestimonialsSection } from './TestimonialsSection'
+import { LeadFunnel } from './LeadFunnel'
 
 interface Project {
   id: string
@@ -77,6 +78,8 @@ export function HomePageClient({ projects }: HomePageClientProps) {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
+      {/* Interactive Lead Funnel Section */}
+      <LeadFunnel />
 
       {/* CTA Section */}
       <section className="section">

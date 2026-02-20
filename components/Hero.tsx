@@ -53,46 +53,69 @@ export function Hero() {
     <>
       {/* Main Hero Banner */}
       <section className="relative pt-20 pb-16 lg:pt-0 lg:pb-0 text-center min-h-screen flex flex-col justify-center items-center">
+        {/* Background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-[#22c55e]/10 blur-[120px] rounded-full pointer-events-none" />
+
         <div className="container-custom relative z-10">
           {/* Badge */}
-          <div className="mb-8 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mb-8 flex justify-center"
+          >
             <div className="inline-flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm text-gray-400 ring-1 ring-white/10">
               <Sparkles className="w-4 h-4 text-[#4ade80]" />
               {t('hero.badge')}
             </div>
-          </div>
+          </motion.div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
+          >
             {t('hero.headline')}
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+          >
             {t('hero.subheadline')}
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
             <Link
               href="#services"
-              className="px-8 py-4 text-white bg-gradient-to-r from-[#22c55e] to-[#16a34a] hover:from-[#16a34a] hover:to-[#15803d] rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-[#22c55e]/20"
+              className="px-8 py-4 text-white bg-gradient-to-r from-[#22c55e] to-[#16a34a] hover:from-[#16a34a] hover:to-[#15803d] rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-[#22c55e]/20 hover:-translate-y-0.5"
             >
               {t('hero.ctaPrimary')}
             </Link>
             <Link
               href="/about#contact"
-              className="px-8 py-4 text-white bg-white/5 hover:bg-white/10 rounded-full font-semibold transition-colors ring-1 ring-white/10 inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 text-white bg-white/5 hover:bg-white/10 rounded-full font-semibold transition-colors ring-1 ring-white/10 inline-flex items-center justify-center gap-2 hover:-translate-y-0.5"
             >
               {t('hero.bookConsultation')}
               <span>→</span>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTO-as-a-Service Section */}
-      <section id="wio" className="relative pt-16 pb-20 lg:pt-20 lg:pb-32">
+      <section id="wio" className="relative pb-20 lg:pb-32">
         <div className="container-custom">
           {/* Header Section */}
           <motion.div

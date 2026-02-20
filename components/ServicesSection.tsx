@@ -39,11 +39,11 @@ export function ServicesSection() {
     const { t } = useLanguage()
 
     return (
-        <section id="services" className="py-24 sm:py-32 bg-background relative overflow-hidden">
+        <section id="services" className="py-24 sm:py-32 relative">
             <div className="container-custom relative z-10">
                 <div className="mx-auto max-w-2xl text-center mb-16">
                     <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-                        {t('services.title')} <span className="text-[#4ade80]">BoragoWeb</span>
+                        {t('services.title')} <span className="text-[#4ade80]">Borago Web</span>
                     </h2>
                     <p className="text-lg leading-8 text-gray-400">
                         {t('services.subtitle')}
@@ -54,7 +54,7 @@ export function ServicesSection() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative overflow-hidden rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 transition-all hover:bg-white/10 hover:ring-[#4ade80]/50"
+                            className="group relative overflow-hidden rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-2 hover:bg-white/10 hover:shadow-2xl hover:shadow-[#4ade80]/10 hover:ring-[#4ade80]/50"
                         >
                             <div className="flex items-start justify-between mb-6">
                                 <div className={`p-3 rounded-2xl bg-white/5 group-hover:bg-[#4ade80]/10 transition-colors`}>

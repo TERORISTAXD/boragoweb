@@ -16,9 +16,9 @@ export function Footer() {
 
   const footerLinks = {
     company: [
+      { label: t('nav.home'), href: '/' },
+      { label: t('nav.services'), href: '/#services' },
       { label: t('footer.about'), href: '/about' },
-      { label: t('footer.team'), href: '/team' },
-      { label: t('footer.blog'), href: '/blog' },
     ],
     legal: [
       { label: t('footer.termsOfService'), href: '/terms' },

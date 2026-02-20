@@ -14,7 +14,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/#services', label: 'Services' },
-  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ]
 
@@ -36,6 +35,17 @@ export function Nav() {
         }, 100)
       } else {
         document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else if (href === '/about#contact') {
+      if (pathname !== '/about') {
+        router.push('/about#contact')
+      } else {
+        e.preventDefault()
+        const element = document.getElementById('contact')
+        if (element) {
+          const top = element.getBoundingClientRect().top + window.scrollY - 80
+          window.scrollTo({ top, behavior: 'smooth' })
+        }
       }
     } else if (href === '/') {
       if (pathname === '/') {
@@ -89,7 +99,18 @@ export function Nav() {
                 {t(`nav.${link.label.toLowerCase()}`)}
               </Link>
             ))}
+            <Link
+              href="/about#contact"
+              onClick={(e) => handleNavClick(e, '/about#contact')}
+              className={cn(
+                'text-sm font-medium transition-colors hover:text-accent',
+                'text-foreground-muted'
+              )}
+            >
+              {t('nav.contact')}
+            </Link>
           </div>
+
 
           {/* Right side actions */}
           <div className="flex items-center gap-4">
@@ -159,6 +180,20 @@ export function Nav() {
                   {t(`nav.${link.label.toLowerCase()}`)}
                 </Link>
               ))}
+              <Link
+                href="/about#contact"
+                onClick={(e) => {
+                  handleNavClick(e, '/about#contact')
+                  setMobileMenuOpen(false)
+                }}
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-accent px-2 py-1',
+                  'text-foreground-muted'
+                )}
+              >
+                {t('nav.contact')}
+              </Link>
+
 
               {user && (
                 <>

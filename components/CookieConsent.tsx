@@ -17,11 +17,11 @@ export function CookieConsent() {
     const cookieConsent = localStorage.getItem('cookieConsent')
     const savedFunctional = localStorage.getItem('functionalCookies')
     const savedAnalytical = localStorage.getItem('analyticalCookies')
-    
+
     setHasConsent(cookieConsent)
     if (savedFunctional) setFunctionalCookies(savedFunctional === 'true')
     if (savedAnalytical) setAnalyticalCookies(savedAnalytical === 'true')
-    
+
     if (!cookieConsent) {
       // Show banner after a short delay for better UX
       const timer = setTimeout(() => {
@@ -62,10 +62,10 @@ export function CookieConsent() {
       {hasConsent && (
         <button
           onClick={openCookieSettings}
-          className="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] shadow-lg shadow-[#22c55e]/30 hover:shadow-xl hover:shadow-[#22c55e]/40 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+          className="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] shadow-lg shadow-[#22c55e]/30 opacity-60 hover:opacity-100 hover:shadow-xl hover:shadow-[#22c55e]/40 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
           aria-label="Cookie Settings"
         >
-          <Cookie className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
+          <Cookie className="w-5 h-5 text-white group-hover:rotate-12 transition-transform duration-300" />
         </button>
       )}
 
@@ -121,21 +121,19 @@ export function CookieConsent() {
               </div>
 
               {/* Functional Cookies */}
-              <div 
-                className={`rounded-xl p-4 border-2 transition-colors cursor-pointer ${
-                  functionalCookies 
-                    ? 'bg-[#22c55e]/10 border-[#22c55e]/30' 
+              <div
+                className={`rounded-xl p-4 border-2 transition-colors cursor-pointer ${functionalCookies
+                    ? 'bg-[#22c55e]/10 border-[#22c55e]/30'
                     : 'bg-white/5 border-white/10'
-                }`}
+                  }`}
                 onClick={() => setFunctionalCookies(!functionalCookies)}
               >
                 <div className="flex items-start gap-3">
-                  <div 
-                    className={`w-6 h-6 rounded flex items-center justify-center mt-0.5 transition-colors ${
-                      functionalCookies 
-                        ? 'bg-[#22c55e]' 
+                  <div
+                    className={`w-6 h-6 rounded flex items-center justify-center mt-0.5 transition-colors ${functionalCookies
+                        ? 'bg-[#22c55e]'
                         : 'bg-white/10 border-2 border-white/20'
-                    }`}
+                      }`}
                   >
                     {functionalCookies && <Check className="w-4 h-4 text-white" />}
                   </div>
@@ -151,21 +149,19 @@ export function CookieConsent() {
               </div>
 
               {/* Analytical Cookies */}
-              <div 
-                className={`rounded-xl p-4 border-2 transition-colors cursor-pointer ${
-                  analyticalCookies 
-                    ? 'bg-[#22c55e]/10 border-[#22c55e]/30' 
+              <div
+                className={`rounded-xl p-4 border-2 transition-colors cursor-pointer ${analyticalCookies
+                    ? 'bg-[#22c55e]/10 border-[#22c55e]/30'
                     : 'bg-white/5 border-white/10'
-                }`}
+                  }`}
                 onClick={() => setAnalyticalCookies(!analyticalCookies)}
               >
                 <div className="flex items-start gap-3">
-                  <div 
-                    className={`w-6 h-6 rounded flex items-center justify-center mt-0.5 transition-colors ${
-                      analyticalCookies 
-                        ? 'bg-[#22c55e]' 
+                  <div
+                    className={`w-6 h-6 rounded flex items-center justify-center mt-0.5 transition-colors ${analyticalCookies
+                        ? 'bg-[#22c55e]'
                         : 'bg-white/10 border-2 border-white/20'
-                    }`}
+                      }`}
                   >
                     {analyticalCookies && <Check className="w-4 h-4 text-white" />}
                   </div>

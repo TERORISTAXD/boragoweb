@@ -5,11 +5,11 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function TermsPage() {
   const { t } = useLanguage()
-  
+
   return (
     <div className="min-h-screen relative px-6 py-24 sm:py-32 lg:px-8">
       <PageBackground variant="default" />
-      
+
       <div className="mx-auto max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
@@ -24,7 +24,7 @@ export default function TermsPage() {
         {/* Content */}
         <div className="prose prose-invert prose-lg max-w-none">
           <div className="space-y-12">
-            
+
             {/* Section 1 */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section1.title')}</h2>
@@ -110,21 +110,13 @@ export default function TermsPage() {
 
             {/* Section 9 */}
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section9.title')}</h2>
-              <p className="text-gray-300 leading-relaxed">
-                {t('terms.section9.content')}
-              </p>
-            </section>
-
-            {/* Section 10 */}
-            <section>
               <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section10.title')}</h2>
               <p className="text-gray-300 leading-relaxed">
                 {t('terms.section10.content')}
               </p>
             </section>
 
-            {/* Section 11 */}
+            {/* Section 10 */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section11.title')}</h2>
               <p className="text-gray-300 leading-relaxed">
@@ -132,7 +124,7 @@ export default function TermsPage() {
               </p>
             </section>
 
-            {/* Section 12 */}
+            {/* Section 11 */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section12.title')}</h2>
               <p className="text-gray-300 leading-relaxed">
@@ -140,7 +132,7 @@ export default function TermsPage() {
               </p>
             </section>
 
-            {/* Section 13 */}
+            {/* Section 12 */}
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">{t('terms.section13.title')}</h2>
               <p className="text-gray-300 leading-relaxed">
