@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Poppins } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import { Nav } from '@/components/Nav'
@@ -24,10 +25,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://boragoweb.eu'),
   title: {
-    default: 'BoragoWeb – Изработка на уебсайтове, SEO оптимизация и дигитален дизайн',
-    template: '%s | BoragoWeb'
+    default: 'Borago Web – Уеб услуги и дигитални решения за вашия бизнес',
+    template: '%s | Borago Web'
   },
-  description: 'BoragoWeb предлага професионална изработка на уебсайтове, SEO оптимизация и дигитални решения. Модерен уеб дизайн, бързина и ефективност за вашия бизнес в България и Европа.',
+  description: 'Borago Web предлага професионални уеб услуги, изработка на сайтове и ефективни дигитални решения за вашия бизнес.',
   keywords: [
     // Bulgarian Keywords (Existing + New)
     'уеб дизайн',
@@ -128,9 +129,58 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const schemaOrg = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Borago Web",
+      "url": "https://boragoweb.eu",
+      "description": "Borago Web предлага професионални уеб услуги, изработка на сайтове и ефективни дигитални решения за вашия бизнес.",
+      "publisher": {
+        "@id": "https://boragoweb.eu/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://boragoweb.eu/#organization",
+      "name": "Borago Web",
+      "url": "https://boragoweb.eu",
+      "logo": "https://boragoweb.eu/favicon.svg",
+      "image": "https://boragoweb.eu/preview.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@boragoweb.eu"
+      },
+      "sameAs": [
+        "https://boragoweb.eu"
+      ]
+    }
+  ];
+
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground">
+        {/* Google Analytics (Replace G-XXXXXXXXXX with your actual Measurement ID) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-R2PV3CVCZQ" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R2PV3CVCZQ', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
         <LanguageProvider>
           <Nav />
           <main id="main-content" className="flex-1">

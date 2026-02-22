@@ -18,7 +18,7 @@ export default function CartPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center max-w-md">
           <ShoppingBag className="w-16 h-16 mx-auto mb-4 text-foreground-muted" />
-          <h1 className="heading-2 mb-4">{t('cart.empty')}</h1>
+          <h2 className="heading-2 mb-4">{t('cart.empty')}</h2>
           <p className="text-foreground-muted mb-8">
             {t('cart.emptyDesc')}
           </p>

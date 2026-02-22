@@ -81,14 +81,14 @@ export function Hero() {
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-normal"
           >
             {t('hero.subheadline')}
-          </motion.p>
+          </motion.h2>
 
           {/* CTA Buttons */}
           <motion.div

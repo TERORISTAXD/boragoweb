@@ -5,12 +5,12 @@ import { PageBackground } from '@/components/PageBackground'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "BoragoWeb – Web Design & Development Agency",
-  description: "Professional, fast, and SEO-optimized websites made by BoragoWeb – combining design, performance, and creativity.",
-  keywords: ["web design", "website development", "SEO", "Next.js", "BoragoWeb", "Bulgaria", "Europe"],
+  title: "Borago Web – Web Services and Digital Solutions for Your Business",
+  description: "Borago Web offers professional web services, website design, and effective digital solutions for your business. Grow your online presence today.",
+  keywords: ["web design", "web services", "digital solutions", "Next.js", "Borago Web", "Bulgaria", "Europe"],
   openGraph: {
-    title: "BoragoWeb – Creative Web Agency",
-    description: "Next.js websites, custom design, and online branding solutions for businesses in Bulgaria and Europe.",
+    title: "Borago Web – Digital Solutions Agency",
+    description: "Next.js websites, custom web services, and digital solutions for your business in Bulgaria and Europe.",
     url: "https://boragoweb.eu",
     siteName: "BoragoWeb",
     images: [
@@ -47,9 +47,9 @@ export default async function HomePage() {
   return (
     <div className="relative isolate overflow-hidden">
       <PageBackground variant="default" />
-      
+
       <Hero />
-      
+
       <HomePageClient projects={projects} />
     </div>
   )

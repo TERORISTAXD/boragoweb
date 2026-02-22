@@ -1,0 +1,23 @@
+# Borago Web
+
+> We create custom web solutions, e-commerce platforms, and digital automations for businesses in Bulgaria and Europe.
+
+## About Us
+Borago Web is a digital agency specializing in high-performance websites built with Next.js, React, and Tailwind CSS. We act as a dedicated technology partner (WIO-as-a-Service), providing comprehensive digital solutions from design to AI-assisted workflows.
+
+## Key Services
+- **Web Development**: Custom, responsive, and fast web experiences optimized for modern search engines.
+- **E-commerce Solutions**: 24/7 online stores with secure payments and easy management.
+- **Automation**: Workflow automation and AI assistant integrations to save time on repetitive tasks.
+- **Custom Solutions**: Tailor-made software, dashboards, and booking systems.
+
+## Contact Information
+- **Website**: https://boragoweb.eu
+- **Language**: Bulgarian (`bg-BG`) and English (`en-US`)
+
+## Technical Stack
+- Framework: Next.js
+- Styling: Tailwind CSS
+- Animations: Framer Motion
+- UI Icons: Lucide React
+- Backend/Database: Supabase
