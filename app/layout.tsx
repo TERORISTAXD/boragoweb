@@ -23,7 +23,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://boragoweb.eu'),
+  metadataBase: new URL('https://boragoweb.com'),
   title: {
     default: 'Borago Web – Уеб услуги и дигитални решения за вашия бизнес',
     template: '%s | Borago Web'
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     'SEO services',
     'modern web applications'
   ],
-  authors: [{ name: 'BoragoWeb Team', url: 'https://boragoweb.eu' }],
+  authors: [{ name: 'BoragoWeb Team', url: 'https://boragoweb.com' }],
   category: 'Digital Agency',
   icons: {
     icon: '/favicon.svg',
@@ -93,11 +93,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'BoragoWeb – Изработка на уебсайтове и SEO оптимизация',
     description: 'Професионален уеб дизайн, SEO оптимизация и дигитални решения за вашия бизнес. BoragoWeb създава бързи, модерни и ефективни сайтове.',
-    url: 'https://boragoweb.eu',
+    url: 'https://boragoweb.com',
     siteName: 'BoragoWeb',
     images: [
       {
-        url: 'https://boragoweb.eu/preview.png',
+        url: 'https://boragoweb.com/preview.png',
         width: 1200,
         height: 630,
         alt: 'BoragoWeb Уеб Дизайн',
@@ -110,13 +110,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BoragoWeb – Уеб дизайн и SEO оптимизация',
     description: 'Изработка на модерни, SEO-оптимизирани и ефективни уебсайтове за бизнеси в България и Европа.',
-    images: ['https://boragoweb.eu/preview.png'],
+    images: ['https://boragoweb.com/preview.png'],
   },
   alternates: {
-    canonical: 'https://boragoweb.eu',
+    canonical: 'https://boragoweb.com',
     languages: {
-      'bg-BG': 'https://boragoweb.eu',
-      'en-US': 'https://boragoweb.eu/en',
+      'bg-BG': 'https://boragoweb.com',
+      'en-US': 'https://boragoweb.com/en',
     },
   },
   verification: {
@@ -134,33 +134,33 @@ export default function RootLayout({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Borago Web",
-      "url": "https://boragoweb.eu",
+      "url": "https://boragoweb.com",
       "description": "Borago Web предлага професионални уеб услуги, изработка на сайтове и ефективни дигитални решения за вашия бизнес.",
       "publisher": {
-        "@id": "https://boragoweb.eu/#organization"
+        "@id": "https://boragoweb.com/#organization"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://boragoweb.eu/#organization",
+      "@id": "https://boragoweb.com/#organization",
       "name": "Borago Web",
-      "url": "https://boragoweb.eu",
-      "logo": "https://boragoweb.eu/favicon.svg",
-      "image": "https://boragoweb.eu/preview.png",
+      "url": "https://boragoweb.com",
+      "logo": "https://boragoweb.com/favicon.svg",
+      "image": "https://boragoweb.com/preview.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "email": "hello@boragoweb.eu"
+        "email": "hello@boragoweb.com"
       },
       "sameAs": [
-        "https://boragoweb.eu"
+        "https://boragoweb.com"
       ]
     }
   ];
 
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
+    <html lang="bg" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"

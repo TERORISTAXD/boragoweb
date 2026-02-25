@@ -198,6 +198,7 @@ export const translations: Translations = {
   'contact.agreeToPolicy': { bg: 'Като избирате това, вие се съгласявате с нашата', en: 'By selecting this, you agree to our' },
   'contact.privacyPolicy': { bg: 'политика за поверителност', en: 'privacy policy' },
   'contact.submit': { bg: 'Да поговорим', en: 'Let\'s talk' },
+  'contact.success': { bg: 'Благодарим ви! Запитването ви е изпратено успешно. Ще се свържем с вас скоро.', en: 'Thank you! Your inquiry was sent successfully. We will get back to you shortly.' },
 
   // Portfolio Page
   'portfolio.title': { bg: 'Портфолио', en: 'Portfolio' },
