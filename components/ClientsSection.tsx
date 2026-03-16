@@ -10,14 +10,14 @@ const clients = [
     logo: '/clients/borago.svg',
     colorLogo: '/clients/borago-color.svg',
     featured: true,
-    website: 'https://borago.netlify.app',
+    website: 'https://boragocafe.eu',
   },
   {
-    name: 'MEDTRANS', 
+    name: 'MEDTRANS',
     logo: '/clients/medtrans.svg',
     colorLogo: '/clients/medtrans-color.svg',
     featured: false,
-    website: 'https://medtrans1.netlify.app',
+    website: 'https://lineika-medtrans.com',
   },
   // Uncomment when logos are added to /public/clients/
   // {
@@ -69,7 +69,7 @@ export function ClientsSection() {
               <>
                 {/* White rounded background - appears on hover */}
                 <div className="absolute inset-0 bg-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-4" />
-                
+
                 {/* Logo container */}
                 <div className={`relative w-full flex items-center justify-center px-4 ${client.featured ? 'h-32' : 'h-16'}`}>
                   {/* Grayscale logo - default state */}
@@ -80,7 +80,7 @@ export function ClientsSection() {
                     height={client.featured ? 120 : 40}
                     className={`object-contain grayscale opacity-50 group-hover:opacity-0 transition-opacity duration-300 ${client.featured ? 'max-h-24' : 'max-h-10'}`}
                   />
-                  
+
                   {/* Color logo - appears on hover */}
                   <Image
                     src={client.colorLogo}
